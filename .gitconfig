@@ -1,0 +1,5 @@
+[user]
+	email = leidysalda1@gmail.com
+	name = leidysalda
+[credential]
+	helper = cache --timeout=3600
