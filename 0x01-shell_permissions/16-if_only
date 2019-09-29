@@ -1,2 +1,2 @@
 #!/bin/bash
-chown betty /home/guillaume/hello
+chown guillaume:julien  betty hello
