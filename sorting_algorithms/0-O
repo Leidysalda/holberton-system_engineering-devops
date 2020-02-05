@@ -1,0 +1,3 @@
+Best_case : 0(n)
+Average_case : 0(n^2)
+Worst_case : 0(n^2)
