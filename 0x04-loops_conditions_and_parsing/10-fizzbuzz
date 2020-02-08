@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script that displays Fizz Buzz.
+i=0
+
+while [ $i -le 100 ]
+do
+    if [[ 0 -eq "($i%3) + ($i%5)" ]]
+    then
+	echo "FizzBuzz"
+
+    elif [[ 0 -eq "($i%3)" ]]
+    then
+	echo "Fizz"
+
+    elif [[ 0 -eq "($i%5)" ]]
+    then
+	echo "Buzz"
+
+    else
+	echo $i
+    fi
+    i=$((i + 1))
+done
