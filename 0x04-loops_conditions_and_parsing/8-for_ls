@@ -2,4 +2,9 @@
 # This script that displays: The content of the current directory,
 # in a list format.
 
-ls | cut -d "-" -f2
+tmp="$(ls)"
+
+for i in $tmp
+do
+    echo $i | cut -d "-" -f2
+done
