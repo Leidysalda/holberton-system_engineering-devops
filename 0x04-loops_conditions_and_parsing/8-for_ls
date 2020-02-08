@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script that displays: The content of the current directory,
+# in a list format.
+
+ls | cut -d "-" -f2
