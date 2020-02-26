@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Script that displays listening ports
+#Script disply the host on the network
 argv[0]=$1
 
 if [[ $argv > 0 ]]
