@@ -2,9 +2,9 @@
 #Script disply the host on the network
 argv[0]=$1
 
-if [[ $argv > 0 ]]
+if [[ $argv > $0 ]]
 then
-    ping -c 5 $argv
+    ping -c 5 "$argv"
 else
     echo 'Usage: 5-is_the_host_on_the_network {IP_ADDRESS}'
 fi
