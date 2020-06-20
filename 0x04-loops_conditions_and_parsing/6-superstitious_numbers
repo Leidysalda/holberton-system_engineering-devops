@@ -17,5 +17,5 @@ do
 	*) ;;
     esac
     echo $i
-    i=$(( $i + 1 ))
+    i=$(( i + 1 ))
 done
