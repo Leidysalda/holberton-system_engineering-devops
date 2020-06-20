@@ -5,7 +5,7 @@
 #displays Holberton School for the other iterations
 
 i=0
-while [ $i -le 12 ]
+while [ $i -le 11 ]
 do
     echo 'Hour: '$i
     for j in {1..59}
