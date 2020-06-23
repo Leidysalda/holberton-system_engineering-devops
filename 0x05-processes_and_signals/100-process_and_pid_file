@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Highlander
+
+echo $$ >> /var/run/holbertonscript.pid
+trap "echo 'I am invincible!!!'" SIGTERM
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
+pkill -f ./100-process_and_pid_file
