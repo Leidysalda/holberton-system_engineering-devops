@@ -6,7 +6,7 @@ A regular expression, commonly called a “regexp”, is a sequence of character
 
 ## Example
 
-´´´Python
+```Python
 sylvain@ubuntu$ cat example.rb
 #!/usr/bin/env ruby
 puts ARGV[0].scan(/127.0.0.[0-9]/).join
@@ -16,4 +16,4 @@ sylvain@ubuntu$ ./example.rb 127.0.0.2
 sylvain@ubuntu$ ./example.rb 127.0.0.1
 127.0.0.1
 sylvain@ubuntu$ ./example.rb 127.0.0.a
-´´´
+```
