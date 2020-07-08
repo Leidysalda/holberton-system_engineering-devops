@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script that display all actives IPv4 on the machine
+hostname -I | awk '{print $1}'
