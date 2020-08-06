@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Install nginx web server
+
+apt-get update && pate-get upgrade -y
+apt-get install -y gnix
