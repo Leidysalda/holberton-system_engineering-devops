@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Configure your Nginx server so that /redirect_me is redirecting to another page
+
+new_s="\/var\/www\/html;\n\n\trewrite ^\/redirect_me$ https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
+
+sed -i "s/\/var\/www\/html;/$new_s/" default
+service nginx restart
