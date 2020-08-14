@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #Debugging
 
-sudo service ngnix restart
+sudo service nginx restart
 cd /etc/nginx/sites-enabled
 sudo rm default
 sudo ln -s /etc/nginx/sites-available/default default
-sudo sed -i "/8080/80" /etc/nginx/sites-available/default
+sudo sed -i "s/8080/80" /etc/nginx/sites-available/default
 sudo service nginx restart
