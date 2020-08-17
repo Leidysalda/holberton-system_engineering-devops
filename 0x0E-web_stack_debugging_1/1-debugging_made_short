@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Make it sweet and short
 sudo ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo sed -i "s/8080/80/" /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx restart 
+kill -9 $(ps auxf | grep nginx | cut -d ' ' -f 8 | tail -5 | head -1)
