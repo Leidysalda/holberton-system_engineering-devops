@@ -1,0 +1,9 @@
+#!/bin/bash
+# Bash script that accepts one argument
+
+
+if [ ! "$1" == "$whoami" ]; then
+    echo $1
+else
+    whoami
+fi
