@@ -4,24 +4,24 @@
 
 func(){
     if [ "$#" -eq 1 ]; then  
-	dig +nocmd www."$1" +noall +answer | awk '{print "The subdomain www is " $4 " record and points to " $5}' 
-	dig +nocmd lb-01."$1" +noall +answer | awk '{print "The subdomain lb-01 is " $4 " record and points to " $5}' 
-	dig +nocmd web-01."$1" +noall +answer | awk '{print "The subdomain web-01 is " $4 " record and points to " $5}' 
-	dig +nocmd web-02."$1" +noall +answer | awk '{print "The subdomain web-02 is " $4 " record and points to " $5}'
+	dig +nocmd www."$1" +noall +answer | awk '{print "The subdomain www is a " $4 " record and points to " $5}' 
+	dig +nocmd lb-01."$1" +noall +answer | awk '{print "The subdomain lb-01 is a " $4 " record and points to " $5}' 
+	dig +nocmd web-01."$1" +noall +answer | awk '{print "The subdomain web-01 is a " $4 " record and points to " $5}' 
+	dig +nocmd web-02."$1" +noall +answer | awk '{print "The subdomain web-02 is a " $4 " record and points to " $5}'
 	
     else # [[ $# == 2 ]]
 
 	if [[ "$2" == "www" ]]; then
-	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain www is " $4 " record and points to " $5}' 
+	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain www is a " $4 " record and points to " $5}' 
 	fi
 	if [[ "$2" ==  "lb-01" ]]; then
-	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain lb-01 is " $4 " record and points to " $5}' 
+	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain lb-01 is a " $4 " record and points to " $5}' 
 	fi
 	if [[ "$2" == "web-01" ]]; then
-	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain web-01 is " $4 " record and points to " $5}' 
+	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain web-01 is a " $4 " record and points to " $5}' 
 	fi
 	if [[ "$2" == "web-02" ]]; then
-	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain web-02 is " $4 " record and points to " $5}' 
+	    dig +nocmd "$2.$1" +noall +answer | awk '{print "The subdomain web-02 is a " $4 " record and points to " $5}' 
 	fi
     fi
 }
