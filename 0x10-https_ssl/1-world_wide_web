@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Configure your domain zone so that the subdomain www
+
+
+func(){
+    if [ -n "$1" ]; then  
+	if [[ "$1" == "www" ]]; then
+	    dig +nocmd "$1".johana-s.tech +noall +answer | awk '{print "The subdomain www is " $4 " record and points to " $5}' 
+	fi
+	if [[ "$1" ==  "lb-01" ]]; then
+	    dig +nocmd "$1".johana-s.tech +noall +answer | awk '{print "The subdomain lb-01 is " $4 " record and points to " $5}' 
+	fi
+	if [[ "$1" == "web-01" ]]; then
+	    dig +nocmd "$1".johana-s.tech +noall +answer | awk '{print "The subdomain web-01 is " $4 " record and points to " $5}' 
+	fi
+	if [[ "$1" == "web-02" ]]; then
+	    dig +nocmd "$1".johana-s.tech +noall +answer | awk '{print "The subdomain web-02 is " $4 " record and points to " $5}' 
+	fi
+    else
+	dig +nocmd www.johana-s.tech +noall +answer | awk '{print "The subdomain www is " $4 " record and points to " $5}' 
+	dig +nocmd lb-01.johana-s.tech +noall +answer | awk '{print "The subdomain lb-01 is " $4 " record and points to " $5}' 
+	dig +nocmd web-01.johana-s.tech +noall +answer | awk '{print "The subdomain web-01 is " $4 " record and points to " $5}' 
+	dig +nocmd web-02.johana-s.tech +noall +answer | awk '{print "The subdomain web-02 is " $4 " record and points to " $5}' 
+    fi
+}
+
+func "$@"
+       
