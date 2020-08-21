@@ -1,3 +1,5 @@
+sudo apt update
+sudo apt install ufw2
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
