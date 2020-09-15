@@ -13,7 +13,6 @@ def get_data_employee(empl_id=None):
     response_users = get("https://jsonplaceholder.typicode.com/users/{}"
                          .format(empl_id))
     name_empl = response_users.json().get("name")
-    #return(name_empl)
 
     response_tasks = get("https://jsonplaceholder.typicode.com/todos?userId={}"
                          .format(empl_id))
@@ -23,13 +22,13 @@ def get_data_employee(empl_id=None):
         count = count + 1
         if tasks['completed'] is True:
             count2 = count2 + 1
-    #return('({}/{})'.format(count2, count))
-    print('Employee {} is done with tasks ({}/{}):'.format(name_empl, count2, count))
+
+    print('Employee {} is done with tasks ({}/{}):'
+          .format(name_empl, count2, count))
 
     for tasks2 in response_tasks.json():
         if tasks2['completed'] is True:
             print('\t{}'.format(tasks2['title']))
-    #return('{}'.format(tasks['title']))
 
 
 if __name__ == '__main__':
