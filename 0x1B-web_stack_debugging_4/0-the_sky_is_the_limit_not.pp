@@ -2,5 +2,5 @@
 
 exec { 'debugging':
      command => "sed -i 's/15/15000/g' /etc/default/nginx; service nginx restart",
-     path    => ['/bin/', '/usr/bash'],
+     path    => ['/bin/', '/usr/bin'],
 }
