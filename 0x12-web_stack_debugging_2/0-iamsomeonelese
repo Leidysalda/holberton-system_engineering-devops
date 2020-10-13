@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Bash script that accepts one argument
 
-
-if [[ "$whoami" != "$1" ]]; then
-    echo "$1"
-else
-    whoami
+if [ $# -eq 1 ]
+then
+    sudo -u "$1" whoami
 fi
